@@ -1,48 +1,80 @@
-# Hi there, I'm Manoj 👋
+<div align="center">
 
-## Enterprise Systems Developer | Google Apps Script Expert | Workflow Automation Specialist
+# 🚀 Manoj Bhere
 
-I build enterprise-grade internal business systems, workflow automation platforms, approval engines, attendance systems, audit systems, and production-ready Google Apps Script WebApps.
+### Enterprise Systems Developer
 
-My focus is solving real operational problems using scalable automation, strong system architecture, and professional UI/UX.
+### Google Apps Script Architect
 
----
+### Workflow Automation Specialist
 
-## What I Build
-
-### Enterprise Systems
-
-* Critical Delegation System
-* RCFA Delay Management System
-* Contractual Attendance System
-* Apprenticeship Management System
-* Driver Attendance Management System (DAMS)
-* Visitor Management System
-* Family Vault
-* Minutes of Meeting System
-* Safety Penalty Management System
-* New Product Development System
-* Order Management System
-* Expense Management System
-* Inventory Management System
-* Product Costing System
+Building production-grade internal business systems, enterprise workflow automation, and scalable Google Apps Script platforms.
 
 ---
 
-## Core Expertise
+### ⚡ Turning Operations into Automation
 
-### Google Apps Script
+From approval engines to attendance systems, from delegation workflows to enterprise dashboards — I design systems that solve real business problems with speed, precision, and professional architecture.
 
-* Enterprise Web Apps
+</div>
+
+---
+
+# 💼 About Me
+
+I specialize in building enterprise-grade automation systems for organizations where operational efficiency matters.
+
+My work focuses on:
+
+* Business Process Automation
+* Approval Workflow Engines
+* Attendance & Tracking Systems
+* Reporting & Analytics Dashboards
+* Google Apps Script Web Applications
+* Android + Web Hybrid Systems
+* Smart Notification Architectures
+
+I don't build demo apps.
+I build systems people use every day.
+
+---
+
+# 🏗 Featured Enterprise Systems
+
+### Critical Delegation System
+
+### RCFA Delay Management System
+
+### Contractual Attendance System
+
+### Driver Attendance Management System (DAMS)
+
+### Apprenticeship Management System
+
+### Visitor Management System
+
+### Family Vault
+
+### Audit & Verification Systems
+
+### New Product Development System
+
+### Expense + Inventory + Order Systems
+
+---
+
+# 🛠 Tech Stack
+
+## Backend Engineering
+
+* Google Apps Script
+* Google Sheets Architecture
+* Workflow Logic Design
 * Multi-user Session Management
-* Approval Workflow Automation
-* Telegram + Email + Notification Systems
-* Google Calendar Sync
-* Google Drive Integration
-* Role-based Access Control
-* Dynamic Reports + Analytics
+* Trigger-based Automation
+* LockService + Concurrency Control
 
-### Frontend
+## Frontend Engineering
 
 * HTML5
 * CSS3
@@ -50,63 +82,83 @@ My focus is solving real operational problems using scalable automation, strong 
 * Bootstrap 5.3
 * DataTables
 * SweetAlert2
-* Responsive UI Systems
+* Professional Responsive UI Systems
 
-### Integrations
+## Integrations
 
 * Telegram Bot API
 * Google Calendar API
 * Google Drive API
-* Android APK WebView Wrappers
-* Camera + Voice Recording Systems
+* Android WebView APK Wrappers
+* Camera Capture + Voice Recording
+* Email + Notification Systems
 
 ---
 
-## Current Focus
+# 🌟 Featured Project
+
+# Critical Delegation System
+
+An enterprise-grade delegation, approval, scheduling, and reporting platform built using Google Apps Script + Google Sheets + HTML/CSS/JavaScript.
+
+### Core Features
+
+✔ Smart Task Delegation
+✔ Multi-Level Approval Workflow
+✔ Telegram Approval Actions
+✔ Due Soon + Overdue Alerts
+✔ Google Calendar Sync
+✔ KRA Reports + Performance Dashboard
+✔ Mobile-Responsive Professional UI
+✔ Verification + Closure Workflow
+
+### Repository
+
+🔗 https://github.com/manumanoj2882/Critical-delegation-system
+
+---
+
+# 🎯 Current Focus
 
 * Enterprise Workflow Automation
-* Approval Engines
-* Android + Web Hybrid Systems
-* Smart Notification Architecture
-* Production-grade Internal Systems
+* High-Scale Internal Systems
+* Android + Web Hybrid Platforms
+* Smart Notification Engines
+* Professional GitHub Architecture
+* Production-Ready System Design
 
 ---
 
-## Featured Project
+# 🧠 Development Philosophy
 
-### Critical Delegation System
+Clean systems.
+Strong architecture.
+Real business impact.
 
-Enterprise-grade task delegation, scheduling, approval, and reporting system built using Google Apps Script + Google Sheets + HTML/CSS/JavaScript.
-
-### Features
-
-* Task Delegation
-* Smart Approval Flow
-* Due Soon + Overdue Notifications
-* Telegram Approval Actions
-* Google Calendar Sync
-* Dashboard + KRA Reports
-* Mobile Responsive UI
-
-Repository:
+Code is not the goal.
+Operational excellence is.
 
 ---
 
-## GitHub Goals
+# 📌 GitHub Mission
 
-Building production-grade repositories that represent real enterprise systems, not just demo projects.
+Building repositories that represent real enterprise systems —
+not tutorial projects.
 
-Focus:
+Every project should show:
 
-* scalable systems
-* business automation
-* strong architecture
-* professional deployment standards
+* structure
+* scale
+* clarity
+* production readiness
+* engineering discipline
 
 ---
 
-## Connect
+<div align="center">
 
-Always building practical systems that solve real business problems.
+## ⚙ Building Systems That Businesses Depend On
 
-Enterprise automation is not coding — it is operational engineering.
+### Enterprise Automation is Operational Engineering
+
+</div>
