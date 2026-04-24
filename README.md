@@ -119,7 +119,7 @@ Real Operational Impact.
 
 📧 manoj.patil64@yahoo.com  
 📍 Aurangabad, Maharashtra, India  
-🔗 GitHub: https://github.com/manumanoj2882
+🔗 GitHub: https://manumanoj2882.github.io/manumanoj2882
 
 ---
 
