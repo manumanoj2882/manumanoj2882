@@ -1,0 +1,2768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj B Bhere | Enterprise Systems Developer & Data Analyst (MIS)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #04090f;
+      --bg2: #060d18;
+      --bg3: #080f1f;
+      --card: rgba(255, 255, 255, 0.032);
+      --card-h: rgba(255, 255, 255, 0.058);
+      --a1: #00c8f0;
+      --a2: #0055e0;
+      --a3: #6d28d9;
+      --gold: #f59e0b;
+      --green: #22c55e;
+      --red: #ef4444;
+      --tx: #dde9f8;
+      --tx2: #7a90b0;
+      --tx3: #3a4e68;
+      --brd: rgba(255, 255, 255, 0.065);
+      --brd-a: rgba(0, 200, 240, 0.22);
+      --glow: 0 0 50px rgba(0, 200, 240, 0.1);
+      --shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+      --r: 14px;
+      --r-sm: 9px;
+      --fn-d: 'Syne', sans-serif;
+      --fn-b: 'DM Sans', sans-serif;
+      --fn-m: 'JetBrains Mono', monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--fn-b);
+      background: var(--bg);
+      color: var(--tx);
+      overflow-x: hidden;
+      line-height: 1.7
+    }
+
+    ::-webkit-scrollbar {
+      width: 3px
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--a1);
+      border-radius: 3px
+    }
+
+    /* BG GRID */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(0, 200, 240, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 200, 240, 0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      z-index: 0;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none
+    }
+
+    section,
+    nav,
+    .section-wrap {
+      position: relative;
+      z-index: 1
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      background: rgba(4, 9, 15, 0.82) !important;
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-bottom: 1px solid var(--brd);
+      padding: 12px 0;
+      transition: all .3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(4, 9, 15, 0.97) !important;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6)
+    }
+
+    .navbar-brand {
+      font-family: var(--fn-d);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--tx) !important;
+      letter-spacing: -0.5px;
+    }
+
+    .navbar-brand span {
+      color: var(--a1)
+    }
+
+    .nav-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--tx2) !important;
+      padding: 5px 12px !important;
+      border-radius: 6px;
+      transition: all .25s;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--a1);
+      border-radius: 2px;
+      transition: width .3s
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--a1) !important
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 60%
+    }
+
+    .navbar-toggler {
+      border: 1px solid var(--brd-a);
+      border-radius: 7px;
+      padding: 5px 9px
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,200,240,0.9)' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    }
+
+    /* ── UTILS ── */
+    .sp {
+      padding: 100px 0
+    }
+
+    .sp-sm {
+      padding: 70px 0
+    }
+
+    .lbl {
+      font-family: var(--fn-m);
+      font-size: 0.68rem;
+      color: var(--a1);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 8px;
+    }
+
+    .lbl::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--a1)
+    }
+
+    .lbl-center {
+      justify-content: center
+    }
+
+    .lbl-center::before {
+      display: none
+    }
+
+    .lbl-center::after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--a1)
+    }
+
+    h2.stitle {
+      font-family: var(--fn-d);
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 14px;
+      color: var(--tx);
+    }
+
+    h2.stitle span {
+      color: var(--a1)
+    }
+
+    .sdesc {
+      color: var(--tx2);
+      font-size: .95rem;
+      max-width: 540px;
+      line-height: 1.82
+    }
+
+    .div-line {
+      width: 52px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--a1), var(--a2));
+      border-radius: 3px;
+      margin: 14px 0 28px
+    }
+
+    .div-center {
+      margin: 14px auto 28px
+    }
+
+    /* ── GLASS CARD ── */
+    .gc {
+      background: var(--card);
+      border: 1px solid var(--brd);
+      border-radius: var(--r);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transition: all .32s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gc::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 200, 240, 0.4), transparent);
+      opacity: 0;
+      transition: opacity .32s;
+    }
+
+    .gc:hover {
+      background: var(--card-h);
+      border-color: var(--brd-a);
+      box-shadow: var(--glow);
+      transform: translateY(-3px)
+    }
+
+    .gc:hover::before {
+      opacity: 1
+    }
+
+    /* ── BUTTONS ── */
+    .ba {
+      background: linear-gradient(135deg, var(--a1), var(--a2));
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: var(--fn-b);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 12px 26px;
+      transition: all .3s;
+      box-shadow: 0 4px 20px rgba(0, 200, 240, 0.22);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+    }
+
+    .ba:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 200, 240, 0.38);
+      color: #fff
+    }
+
+    .bo {
+      background: transparent;
+      color: var(--a1);
+      border: 1px solid var(--brd-a);
+      border-radius: 8px;
+      font-family: var(--fn-b);
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 11px 24px;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+    }
+
+    .bo:hover {
+      background: rgba(0, 200, 240, 0.08);
+      border-color: var(--a1);
+      color: var(--a1);
+      transform: translateY(-2px)
+    }
+
+    .bg-btn {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--tx2);
+      border: 1px solid var(--brd);
+      border-radius: 8px;
+      font-family: var(--fn-b);
+      font-weight: 500;
+      font-size: 0.82rem;
+      padding: 9px 18px;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .bg-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--tx);
+      border-color: rgba(255, 255, 255, 0.14)
+    }
+
+    /* ── COLOR CHIPS ── */
+    .c1 {
+      color: var(--a1) !important
+    }
+
+    .c2 {
+      color: var(--a2) !important
+    }
+
+    .c3 {
+      color: var(--a3) !important
+    }
+
+    .cg {
+      color: var(--green) !important
+    }
+
+    .co {
+      color: var(--gold) !important
+    }
+
+    .cr {
+      color: var(--red) !important
+    }
+
+    .bg1 {
+      background: rgba(0, 200, 240, 0.1) !important
+    }
+
+    .bg2 {
+      background: rgba(0, 85, 224, 0.12) !important
+    }
+
+    .bg3 {
+      background: rgba(109, 40, 217, 0.12) !important
+    }
+
+    .bgg {
+      background: rgba(34, 197, 94, 0.12) !important
+    }
+
+    .bgo {
+      background: rgba(245, 158, 11, 0.12) !important
+    }
+
+    .bgr {
+      background: rgba(239, 68, 68, 0.1) !important
+    }
+
+    /* ══════════════ HERO ══════════════ */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none
+    }
+
+    .hg1 {
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0, 85, 224, 0.1), transparent 70%);
+      top: -150px;
+      right: -150px
+    }
+
+    .hg2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(109, 40, 217, 0.08), transparent 70%);
+      bottom: -50px;
+      left: -100px
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 200, 240, 0.07);
+      border: 1px solid rgba(0, 200, 240, 0.18);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-family: var(--fn-m);
+      font-size: 0.68rem;
+      color: var(--a1);
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+    }
+
+    .hdot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: hpulse 2s infinite
+    }
+
+    @keyframes hpulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(.8)
+      }
+    }
+
+    .hero-greet {
+      font-size: 1rem;
+      color: var(--tx2);
+      font-weight: 300;
+      margin-bottom: 6px
+    }
+
+    .hero-name {
+      font-family: var(--fn-d);
+      font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #d8eeff 0%, #90b5da 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-name span {
+      background: linear-gradient(135deg, var(--a1), var(--a2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .hero-tw {
+      font-size: clamp(.95rem, 2.2vw, 1.18rem);
+      color: var(--tx2);
+      font-weight: 300;
+      margin-bottom: 6px
+    }
+
+    .hero-typed {
+      font-family: var(--fn-d);
+      font-size: clamp(1rem, 2.6vw, 1.45rem);
+      font-weight: 700;
+      color: var(--a1)
+    }
+
+    .typed-cursor {
+      color: var(--a1)
+    }
+
+    .hero-desc {
+      color: var(--tx2);
+      font-size: .94rem;
+      max-width: 460px;
+      line-height: 1.82;
+      margin: 20px 0 32px
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 44px;
+      padding-top: 36px;
+      border-top: 1px solid var(--brd)
+    }
+
+    .hsn {
+      font-family: var(--fn-d);
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--a1), var(--a2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .hsl {
+      font-size: .72rem;
+      color: var(--tx3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px
+    }
+
+    /* Avatar */
+    .av-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .av-ring {
+      position: absolute;
+      border-radius: 50%
+    }
+
+    .ar1 {
+      width: 400px;
+      height: 400px;
+      border: 1px solid rgba(0, 200, 240, 0.1);
+      animation: rspin 22s linear infinite
+    }
+
+    .ar2 {
+      width: 330px;
+      height: 330px;
+      border: 1px dashed rgba(0, 85, 224, 0.12);
+      animation: rspin 16s linear infinite reverse
+    }
+
+    .ar3 {
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(109, 40, 217, 0.1);
+      animation: rspin 10s linear infinite
+    }
+
+    @keyframes rspin {
+      from {
+        transform: rotate(0)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .av-box {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 200, 240, 0.12), rgba(0, 85, 224, 0.06));
+      border: 2px solid rgba(0, 200, 240, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 80px rgba(0, 200, 240, 0.08), inset 0 0 60px rgba(0, 85, 224, 0.04);
+      font-size: 5.5rem;
+      color: rgba(0, 200, 240, 0.55);
+    }
+
+    .av-tags {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 9px
+    }
+
+    .av-tl {
+      right: calc(100% + 16px)
+    }
+
+    .av-tr {
+      left: calc(100% + 16px)
+    }
+
+    .av-tag {
+      background: rgba(6, 13, 24, 0.8);
+      border: 1px solid var(--brd-a);
+      border-radius: 7px;
+      padding: 6px 13px;
+      font-family: var(--fn-m);
+      font-size: 0.68rem;
+      color: var(--a1);
+      backdrop-filter: blur(10px);
+      white-space: nowrap;
+    }
+
+    @keyframes fl {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .fl {
+      animation: fl 4s ease-in-out infinite
+    }
+
+    /* ══════════════ ABOUT ══════════════ */
+    #about {
+      background: var(--bg2)
+    }
+
+    .ai-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 26px 0
+    }
+
+    .ai-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 15px;
+      background: var(--card);
+      border: 1px solid var(--brd);
+      border-radius: var(--r-sm);
+      transition: all .3s
+    }
+
+    .ai-item:hover {
+      border-color: var(--brd-a);
+      background: var(--card-h)
+    }
+
+    .ai-ico {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: .85rem
+    }
+
+    .ai-lbl {
+      font-family: var(--fn-m);
+      font-size: .62rem;
+      color: var(--tx3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px
+    }
+
+    .ai-val {
+      font-size: .88rem;
+      color: var(--tx);
+      font-weight: 500
+    }
+
+    .as-card {
+      text-align: center;
+      padding: 28px 18px
+    }
+
+    .as-num {
+      font-family: var(--fn-d);
+      font-size: 2.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--a1), var(--a2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1
+    }
+
+    .as-lbl {
+      font-size: .78rem;
+      color: var(--tx2);
+      margin-top: 5px
+    }
+
+    .kpi-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px
+    }
+
+    .kpi-chip {
+      font-family: var(--fn-m);
+      font-size: .68rem;
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      border-radius: 6px;
+      padding: 5px 12px;
+      color: var(--green);
+    }
+
+    /* ══════════════ PROFILES ══════════════ */
+    .pf-card {
+      padding: 28px 20px;
+      text-align: center
+    }
+
+    .pf-ico {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 16px;
+      transition: all .3s
+    }
+
+    .gc:hover .pf-ico {
+      transform: scale(1.08) rotate(-4deg)
+    }
+
+    .pf-title {
+      font-family: var(--fn-d);
+      font-weight: 700;
+      font-size: .98rem;
+      margin-bottom: 5px
+    }
+
+    .pf-val {
+      font-size: .78rem;
+      color: var(--tx2);
+      margin-bottom: 16px;
+      word-break: break-all
+    }
+
+    /* ══════════════ SKILLS ══════════════ */
+    #skills {
+      background: var(--bg2)
+    }
+
+    .sk-card {
+      padding: 26px
+    }
+
+    .sk-cat-title {
+      font-family: var(--fn-d);
+      font-weight: 700;
+      font-size: .96rem;
+      color: var(--tx);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .sk-cat-ico {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      flex-shrink: 0
+    }
+
+    .sk-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 200, 240, 0.055);
+      border: 1px solid rgba(0, 200, 240, 0.13);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: .76rem;
+      color: var(--tx2);
+      transition: all .22s;
+      margin: 3px;
+      font-weight: 500;
+      cursor: default;
+    }
+
+    .sk-tag:hover {
+      background: rgba(0, 200, 240, 0.11);
+      border-color: var(--a1);
+      color: var(--a1);
+      transform: translateY(-2px)
+    }
+
+    .sk-tag i {
+      font-size: .7rem;
+      color: var(--a1)
+    }
+
+    /* ══════════════ EDUCATION ══════════════ */
+    .edu-tl {
+      position: relative
+    }
+
+    .edu-tl::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--a1), var(--a2), transparent)
+    }
+
+    .edu-item {
+      padding-left: 56px;
+      margin-bottom: 26px;
+      position: relative
+    }
+
+    .edu-dot {
+      position: absolute;
+      left: 10px;
+      top: 18px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--a1);
+      border: 3px solid var(--bg2);
+      box-shadow: 0 0 12px rgba(0, 200, 240, 0.45)
+    }
+
+    .edu-card {
+      padding: 22px
+    }
+
+    .edu-yr {
+      font-family: var(--fn-m);
+      font-size: .66rem;
+      color: var(--a1);
+      letter-spacing: 1px;
+      margin-bottom: 5px
+    }
+
+    .edu-deg {
+      font-family: var(--fn-d);
+      font-weight: 700;
+      font-size: .98rem;
+      color: var(--tx);
+      margin-bottom: 3px
+    }
+
+    .edu-sch {
+      font-size: .82rem;
+      color: var(--tx2)
+    }
+
+    /* ══════════════ PROJECTS ══════════════ */
+    #projects {
+      background: var(--bg2)
+    }
+
+    .proj-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px
+    }
+
+    .pf-btn {
+      font-family: var(--fn-m);
+      font-size: .68rem;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid var(--brd);
+      background: var(--card);
+      color: var(--tx2);
+      transition: all .25s;
+    }
+
+    .pf-btn.active,
+    .pf-btn:hover {
+      background: rgba(0, 200, 240, 0.1);
+      border-color: var(--brd-a);
+      color: var(--a1)
+    }
+
+    .proj-card {
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      display: none
+    }
+
+    .proj-card.show {
+      display: flex;
+      flex-direction: column
+    }
+
+    .proj-card.show.featured {
+      display: block
+    }
+
+    .pc-head {
+      padding: 24px 24px 0
+    }
+
+    .pc-ico {
+      width: 48px;
+      height: 48px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      flex-shrink: 0
+    }
+
+    .pc-badge {
+      font-family: var(--fn-m);
+      font-size: .6rem;
+      padding: 3px 9px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      float: right;
+      margin-top: 2px
+    }
+
+    .b-feat {
+      background: rgba(245, 158, 11, .13);
+      border: 1px solid rgba(245, 158, 11, .28);
+      color: var(--gold)
+    }
+
+    .b-ent {
+      background: rgba(0, 200, 240, .08);
+      border: 1px solid rgba(0, 200, 240, .18);
+      color: var(--a1)
+    }
+
+    .b-audit {
+      background: rgba(239, 68, 68, .1);
+      border: 1px solid rgba(239, 68, 68, .22);
+      color: var(--red)
+    }
+
+    .b-ops {
+      background: rgba(109, 40, 217, .12);
+      border: 1px solid rgba(109, 40, 217, .22);
+      color: #a78bfa
+    }
+
+    .b-biz {
+      background: rgba(34, 197, 94, .1);
+      border: 1px solid rgba(34, 197, 94, .2);
+      color: var(--green)
+    }
+
+    .pc-title {
+      font-family: var(--fn-d);
+      font-weight: 700;
+      font-size: .98rem;
+      color: var(--tx);
+      line-height: 1.28;
+      margin-bottom: 0
+    }
+
+    .pc-desc {
+      font-size: .82rem;
+      color: var(--tx2);
+      line-height: 1.72;
+      padding: 10px 24px 0
+    }
+
+    .pc-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 14px 24px
+    }
+
+    .tc {
+      font-family: var(--fn-m);
+      font-size: .6rem;
+      background: rgba(255, 255, 255, .036);
+      border: 1px solid var(--brd);
+      border-radius: 4px;
+      padding: 3px 7px;
+      color: var(--tx3)
+    }
+
+    .pc-foot {
+      padding: 14px 24px 22px;
+      display: flex;
+      gap: 8px;
+      border-top: 1px solid var(--brd);
+      margin-top: auto
+    }
+
+    /* ══════════════ EXPERIENCE ══════════════ */
+    .exp-tl {
+      position: relative
+    }
+
+    .exp-tl::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--a1), var(--a2), transparent);
+      transform: translateX(-50%)
+    }
+
+    .exp-item {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: calc(50% + 36px);
+      margin-bottom: 26px;
+      position: relative
+    }
+
+    .exp-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: calc(50% + 36px)
+    }
+
+    .exp-dot {
+      position: absolute;
+      left: 50%;
+      top: 22px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--a2);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 12px rgba(0, 85, 224, .5);
+      transform: translateX(-50%)
+    }
+
+    .exp-card {
+      padding: 22px;
+      width: 100%
+    }
+
+    .exp-period {
+      font-family: var(--fn-m);
+      font-size: .65rem;
+      color: var(--a1);
+      letter-spacing: 1px;
+      margin-bottom: 5px
+    }
+
+    .exp-co {
+      font-family: var(--fn-d);
+      font-weight: 700;
+      font-size: .98rem;
+      color: var(--tx);
+      margin-bottom: 3px
+    }
+
+    .exp-role {
+      font-size: .84rem;
+      color: var(--tx2);
+      margin-bottom: 8px
+    }
+
+    .exp-pts {
+      list-style: none;
+      padding: 0;
+      margin: 0
+    }
+
+    .exp-pts li {
+      font-size: .78rem;
+      color: var(--tx3);
+      display: flex;
+      gap: 8px;
+      margin-bottom: 5px;
+      line-height: 1.55
+    }
+
+    .exp-pts li::before {
+      content: '▸';
+      color: var(--a1);
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    @media(max-width:768px) {
+      .exp-tl::before {
+        left: 16px;
+        transform: none
+      }
+
+      .exp-item,
+      .exp-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 52px;
+        padding-right: 0
+      }
+
+      .exp-dot {
+        left: 10px;
+        transform: none
+      }
+
+      .ai-grid {
+        grid-template-columns: 1fr
+      }
+
+      .ar1 {
+        width: 280px;
+        height: 280px
+      }
+
+      .ar2 {
+        width: 230px;
+        height: 230px
+      }
+
+      .ar3 {
+        width: 180px;
+        height: 180px
+      }
+
+      .av-box {
+        width: 160px;
+        height: 160px;
+        font-size: 4rem
+      }
+
+      .av-tags {
+        display: none
+      }
+    }
+
+    /* ══════════════ CONTACT ══════════════ */
+    .ct-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      margin-bottom: 14px
+    }
+
+    .ct-ico {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0
+    }
+
+    .ct-lbl {
+      font-family: var(--fn-m);
+      font-size: .62rem;
+      color: var(--tx3);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 3px
+    }
+
+    .ct-val {
+      font-size: .92rem;
+      color: var(--tx);
+      font-weight: 500
+    }
+
+    .ct-val a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .ct-val a:hover {
+      color: var(--a1)
+    }
+
+    .fc {
+      background: rgba(255, 255, 255, .038);
+      border: 1px solid var(--brd);
+      border-radius: 9px;
+      color: var(--tx);
+      padding: 13px 16px;
+      font-family: var(--fn-b);
+      font-size: .88rem;
+      width: 100%;
+      transition: all .3s;
+      outline: none;
+      resize: none
+    }
+
+    .fc::placeholder {
+      color: var(--tx3)
+    }
+
+    .fc:focus {
+      border-color: var(--brd-a);
+      background: rgba(0, 200, 240, .035);
+      box-shadow: 0 0 0 3px rgba(0, 200, 240, .055)
+    }
+
+    .fg {
+      margin-bottom: 16px
+    }
+
+    .fl-lbl {
+      font-family: var(--fn-m);
+      font-size: .66rem;
+      color: var(--tx3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 7px;
+      display: block
+    }
+
+    /* ══════════════ FOOTER ══════════════ */
+    footer {
+      background: rgba(4, 9, 15, .97);
+      border-top: 1px solid var(--brd);
+      padding: 48px 0 28px
+    }
+
+    .f-tag {
+      font-family: var(--fn-d);
+      font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+      font-weight: 800;
+      color: var(--tx2);
+      text-align: center;
+      margin-bottom: 26px
+    }
+
+    .f-tag span {
+      color: var(--a1)
+    }
+
+    .f-soc {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 26px
+    }
+
+    .f-soc a {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: var(--card);
+      border: 1px solid var(--brd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--tx2);
+      font-size: .9rem;
+      transition: all .3s;
+      text-decoration: none
+    }
+
+    .f-soc a:hover {
+      border-color: var(--brd-a);
+      color: var(--a1);
+      transform: translateY(-3px)
+    }
+
+    .f-copy {
+      text-align: center;
+      font-size: .75rem;
+      color: var(--tx3)
+    }
+
+    .f-copy span {
+      color: var(--a1)
+    }
+
+    /* ══════════════ MISC ══════════════ */
+    #scrollTop {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--a1), var(--a2));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(0, 200, 240, .28);
+      transition: all .3s
+    }
+
+    #scrollTop:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0, 200, 240, .5)
+    }
+
+    #scrollTop.show {
+      display: flex
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 76px;
+      right: 26px;
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: #25d366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      z-index: 998;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, .4);
+      text-decoration: none;
+      transition: all .3s
+    }
+
+    .wa-float:hover {
+      transform: translateY(-3px);
+      color: #fff
+    }
+
+    /* stats pill */
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: .72rem;
+      font-family: var(--fn-m)
+    }
+
+    /* Featured proj special */
+    .feat-proj {
+      border-color: rgba(245, 158, 11, .2) !important;
+      padding: 34px
+    }
+
+    .feat-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: .82rem;
+      color: var(--tx2);
+      margin-bottom: 9px
+    }
+
+    .feat-check i {
+      color: var(--green);
+      margin-top: 3px;
+      flex-shrink: 0
+    }
+
+    /* project counter */
+    .proj-count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 200, 240, .07);
+      border: 1px solid rgba(0, 200, 240, .15);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-family: var(--fn-m);
+      font-size: .7rem;
+      color: var(--a1);
+      letter-spacing: .5px;
+    }
+
+    /* Cert card */
+    .cert-card {
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px
+    }
+
+    .cert-ico {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem
+    }
+
+    .cert-title {
+      font-family: var(--fn-d);
+      font-weight: 700;
+      font-size: .92rem;
+      margin-bottom: 3px;
+      color: var(--tx)
+    }
+
+    .cert-sub {
+      font-size: .78rem;
+      color: var(--tx2)
+    }
+
+    /* Integration pills */
+    .int-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 16px;
+      background: var(--card);
+      border: 1px solid var(--brd);
+      border-radius: 8px;
+      font-size: .8rem;
+      color: var(--tx2);
+      transition: all .25s;
+      margin: 4px;
+      font-weight: 500
+    }
+
+    .int-pill:hover {
+      background: var(--card-h);
+      border-color: var(--brd-a);
+      color: var(--a1);
+      transform: translateY(-2px)
+    }
+
+    .int-pill i {
+      color: var(--a1);
+      font-size: .78rem
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="particles-js"></div>
+
+  <!-- ════════ NAVBAR ════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">MBB<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nc">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nc">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profiles">Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════ HERO ════════ -->
+  <section id="home">
+    <div class="hero-glow hg1"></div>
+    <div class="hero-glow hg2"></div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-badge"><span class="hdot"></span> Open to Enterprise Projects · Aurangabad, MH</div>
+          <p class="hero-greet">Hi There,</p>
+          <h1 class="hero-name">I'm <span>Manoj</span><br>B Bhere</h1>
+          <p class="hero-tw">I am into<br><span class="hero-typed" id="typedEl"></span></p>
+          <p class="hero-desc">
+            Results-oriented Enterprise Systems Developer with 8+ years building production-grade internal systems,
+            workflow automation platforms, and data-driven MIS dashboards that businesses depend on every day.
+          </p>
+          <div class="hero-btns">
+            <a href="#about" class="ba"><i class="fas fa-user"></i> About Me</a>
+            <a href="MANOJ_BHERE_S_RESUME_FOR_MIS__2__compressed.pdf" class="bo" download><i
+                class="fas fa-download"></i> Resume</a>
+            <a href="#contact" class="bg-btn"><i class="fas fa-envelope"></i> Contact</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hsn">8+</div>
+              <div class="hsl">Years Exp.</div>
+            </div>
+            <div>
+              <div class="hsn">40+</div>
+              <div class="hsl">Systems Built</div>
+            </div>
+            <div>
+              <div class="hsn">6</div>
+              <div class="hsl">Companies</div>
+            </div>
+            <div>
+              <div class="hsn">3</div>
+              <div class="hsl">Languages</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+          <div class="av-wrap fl">
+            <div class="av-ring ar1"></div>
+            <div class="av-ring ar2"></div>
+            <div class="av-ring ar3"></div>
+            <div class="av-tags av-tl">
+              <div class="av-tag">⚙ Apps Script</div>
+              <div class="av-tag">📊 MIS Systems</div>
+              <div class="av-tag">🤖 Automation</div>
+            </div>
+            <div class="av-box"><i class="fas fa-laptop-code"></i></div>
+            <div class="av-tags av-tr">
+              <div class="av-tag">📱 WebApps</div>
+              <div class="av-tag">📡 Telegram Bot</div>
+              <div class="av-tag">📈 Power BI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ABOUT ════════ -->
+  <section id="about" class="sp">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="lbl">Who I Am</div>
+          <h2 class="stitle">About <span>Me</span></h2>
+          <div class="div-line"></div>
+          <p class="sdesc mb-3">
+            I'm <strong style="color:var(--tx)">Manoj B Bhere</strong>, a Data Analyst (MIS) and Enterprise Systems
+            Developer based in Aurangabad, Maharashtra. I specialize in building enterprise-grade internal systems —
+            inventory, production, attendance, audit, delegation, RCFA, visitor, and many more — primarily using Google
+            Apps Script, Advanced Excel, and Power BI.
+          </p>
+          <p class="sdesc mb-4">
+            I translate complex operational workflows into scalable, maintainable WebApps and automation systems. My
+            work has directly led to measurable outcomes: 20% reduction in excess stock, 15% increase in stock turnover,
+            10% production efficiency gain, and 25% faster reporting.
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-chip">📉 20% Stock Reduction</span>
+            <span class="kpi-chip">📈 15% Turnover Increase</span>
+            <span class="kpi-chip">⚡ 10% Production Efficiency</span>
+            <span class="kpi-chip">⏱ 25% Faster Reporting</span>
+            <span class="kpi-chip">✅ 12% Error Reduction</span>
+          </div>
+          <a href="MANOJ_BHERE_S_RESUME_FOR_MIS__2__compressed.pdf" class="ba mt-4" download>
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="row g-3 mb-4">
+            <div class="col-4">
+              <div class="gc as-card">
+                <div class="as-num">8+</div>
+                <div class="as-lbl">Years Exp.</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="gc as-card">
+                <div class="as-num">40+</div>
+                <div class="as-lbl">Systems Built</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="gc as-card">
+                <div class="as-num">6</div>
+                <div class="as-lbl">Companies</div>
+              </div>
+            </div>
+          </div>
+          <div class="ai-grid">
+            <div class="ai-item">
+              <div class="ai-ico bg1"><i class="fas fa-briefcase c1"></i></div>
+              <div>
+                <div class="ai-lbl">Current Role</div>
+                <div class="ai-val">MIS – Enterprise Systems</div>
+              </div>
+            </div>
+            <div class="ai-item">
+              <div class="ai-ico bg2"><i class="fas fa-industry c2"></i></div>
+              <div>
+                <div class="ai-lbl">Company</div>
+                <div class="ai-val">Kalika Steel Alloys Pvt Ltd</div>
+              </div>
+            </div>
+            <div class="ai-item">
+              <div class="ai-ico bgo"><i class="fas fa-envelope co"></i></div>
+              <div>
+                <div class="ai-lbl">Email</div>
+                <div class="ai-val" style="font-size:.8rem">manoj.patil64@yahoo.com</div>
+              </div>
+            </div>
+            <div class="ai-item">
+              <div class="ai-ico bg3"><i class="fas fa-map-marker-alt c3"></i></div>
+              <div>
+                <div class="ai-lbl">Location</div>
+                <div class="ai-val">Aurangabad, MH – 431001</div>
+              </div>
+            </div>
+            <div class="ai-item">
+              <div class="ai-ico bgg"><i class="fas fa-birthday-cake cg"></i></div>
+              <div>
+                <div class="ai-lbl">Date of Birth</div>
+                <div class="ai-val">14 October 1990</div>
+              </div>
+            </div>
+            <div class="ai-item">
+              <div class="ai-ico bg1"><i class="fas fa-language c1"></i></div>
+              <div>
+                <div class="ai-lbl">Languages</div>
+                <div class="ai-val">Marathi · Hindi · English</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ PROFILES ════════ -->
+  <section id="profiles" class="sp" style="background:var(--bg3)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="lbl lbl-center">Find Me On</div>
+        <h2 class="stitle text-center">All My <span>Profiles</span></h2>
+        <div class="div-line div-center"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc pf-card">
+            <div class="pf-ico bg1"><i class="fab fa-github c1"></i></div>
+            <div class="pf-title">GitHub</div>
+            <div class="pf-val">manumanoj2882</div>
+            <a href="https://github.com/manumanoj2882" target="_blank" class="ba"
+              style="font-size:.75rem;padding:8px 16px"><i class="fas fa-external-link-alt"></i> Visit</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="130">
+          <div class="gc pf-card">
+            <div class="pf-ico bgo"><i class="fas fa-envelope co"></i></div>
+            <div class="pf-title">Email</div>
+            <div class="pf-val">manoj.patil64<br>@yahoo.com</div>
+            <a href="mailto:manoj.patil64@yahoo.com" class="bo" style="font-size:.75rem;padding:8px 16px"><i
+                class="fas fa-paper-plane"></i> Send</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="180">
+          <div class="gc pf-card">
+            <div class="pf-ico bgg"><i class="fas fa-phone cg"></i></div>
+            <div class="pf-title">Phone</div>
+            <div class="pf-val">+91 88558 62882</div>
+            <a href="tel:+918855862882" class="bg-btn" style="font-size:.75rem;padding:8px 16px"><i
+                class="fas fa-phone-alt"></i> Call</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="230">
+          <div class="gc pf-card">
+            <div class="pf-ico" style="background:rgba(37,211,102,.12)"><i class="fab fa-whatsapp"
+                style="color:#25d366;font-size:1.6rem"></i></div>
+            <div class="pf-title">WhatsApp</div>
+            <div class="pf-val">+91 88558 62882</div>
+            <a href="https://wa.me/918855862882" target="_blank" class="bg-btn"
+              style="font-size:.75rem;padding:8px 16px"><i class="fab fa-whatsapp"></i> Chat</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="280">
+          <div class="gc pf-card">
+            <div class="pf-ico bg3"><i class="fab fa-linkedin-in c3"></i></div>
+            <div class="pf-title">LinkedIn</div>
+            <div class="pf-val">manumanoj2882</div>
+            <a href="https://linkedin.com/in/manumanoj2882" target="_blank" class="bg-btn"
+              style="font-size:.75rem;padding:8px 16px"><i class="fab fa-linkedin"></i> Connect</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="330">
+          <div class="gc pf-card">
+            <div class="pf-ico bgr"><i class="fab fa-instagram cr"></i></div>
+            <div class="pf-title">Instagram</div>
+            <div class="pf-val">manumanoj2314</div>
+            <a href="https://instagram.com/manumanoj2314" target="_blank" class="bg-btn"
+              style="font-size:.75rem;padding:8px 16px"><i class="fab fa-instagram"></i> Follow</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SKILLS ════════ -->
+  <section id="skills" class="sp">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="lbl lbl-center">Technical Expertise</div>
+        <h2 class="stitle text-center">Skills & <span>Abilities</span></h2>
+        <div class="div-line div-center"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc sk-card h-100">
+            <div class="sk-cat-title">
+              <div class="sk-cat-ico bg1"><i class="fas fa-server c1"></i></div> Backend / Automation
+            </div>
+            <div>
+              <span class="sk-tag"><i class="fas fa-code"></i> Google Apps Script</span>
+              <span class="sk-tag"><i class="fas fa-table"></i> Sheets Architecture</span>
+              <span class="sk-tag"><i class="fas fa-cogs"></i> Workflow Automation</span>
+              <span class="sk-tag"><i class="fas fa-clock"></i> Trigger Automation</span>
+              <span class="sk-tag"><i class="fas fa-user-shield"></i> Session Management</span>
+              <span class="sk-tag"><i class="fas fa-lock"></i> LockService</span>
+              <span class="sk-tag"><i class="fas fa-database"></i> Database Design</span>
+              <span class="sk-tag"><i class="fas fa-project-diagram"></i> Approval Engine</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="130">
+          <div class="gc sk-card h-100">
+            <div class="sk-cat-title">
+              <div class="sk-cat-ico bg3"><i class="fas fa-palette c3"></i></div> Frontend
+            </div>
+            <div>
+              <span class="sk-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="sk-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="sk-tag"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="sk-tag"><i class="fab fa-bootstrap"></i> Bootstrap 5.3</span>
+              <span class="sk-tag"><i class="fas fa-table-list"></i> DataTables</span>
+              <span class="sk-tag"><i class="fas fa-bell"></i> SweetAlert2</span>
+              <span class="sk-tag"><i class="fas fa-mobile-alt"></i> Responsive UI</span>
+              <span class="sk-tag"><i class="fas fa-sitemap"></i> Google Sites</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="180">
+          <div class="gc sk-card h-100">
+            <div class="sk-cat-title">
+              <div class="sk-cat-ico bgg"><i class="fas fa-plug cg"></i></div> Integrations
+            </div>
+            <div>
+              <span class="sk-tag"><i class="fab fa-telegram"></i> Telegram Bot API</span>
+              <span class="sk-tag"><i class="fas fa-calendar-alt"></i> Google Calendar</span>
+              <span class="sk-tag"><i class="fab fa-google-drive"></i> Google Drive API</span>
+              <span class="sk-tag"><i class="fab fa-whatsapp"></i> WhatsApp Automation</span>
+              <span class="sk-tag"><i class="fab fa-android"></i> Android WebView APK</span>
+              <span class="sk-tag"><i class="fas fa-camera"></i> Camera Capture</span>
+              <span class="sk-tag"><i class="fas fa-microphone"></i> Voice Recording</span>
+              <span class="sk-tag"><i class="fas fa-envelope"></i> Gmail API</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="230">
+          <div class="gc sk-card h-100">
+            <div class="sk-cat-title">
+              <div class="sk-cat-ico bgo"><i class="fas fa-chart-bar co"></i></div> Analytics & BI
+            </div>
+            <div>
+              <span class="sk-tag"><i class="fas fa-file-excel"></i> Advanced Excel</span>
+              <span class="sk-tag"><i class="fas fa-chart-pie"></i> Microsoft Power BI</span>
+              <span class="sk-tag"><i class="fas fa-chart-line"></i> Looker Studio</span>
+              <span class="sk-tag"><i class="fas fa-database"></i> MIS Reporting</span>
+              <span class="sk-tag"><i class="fas fa-tachometer-alt"></i> Dashboard Dev</span>
+              <span class="sk-tag"><i class="fas fa-cubes"></i> Data Modelling</span>
+              <span class="sk-tag"><i class="fas fa-boxes"></i> IMS / PMS / FMS</span>
+              <span class="sk-tag"><i class="fas fa-clipboard-check"></i> Checklist Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Certifications Row -->
+      <div class="row g-4 mt-3">
+        <div class="col-12" data-aos="fade-up">
+          <div
+            style="text-align:center;margin-bottom:18px;font-family:var(--fn-m);font-size:.68rem;color:var(--tx3);letter-spacing:2px;text-transform:uppercase">
+            Certifications & Advanced Training</div>
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-3">
+              <div class="gc cert-card">
+                <div class="cert-ico bgo"><i class="fab fa-google co"></i></div>
+                <div>
+                  <div class="cert-title">Advance Google G Suite</div>
+                  <div class="cert-sub">Course by Sanidhay Kumar · Delhi · 2022–2023</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="gc cert-card">
+                <div class="cert-ico bg1"><i class="fas fa-chart-area c1"></i></div>
+                <div>
+                  <div class="cert-title">Looker Business Analyst</div>
+                  <div class="cert-sub">Dashboard, Looks, Table Calc, Caching & Filters</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="gc cert-card">
+                <div class="cert-ico bgr"><i class="fas fa-network-wired cr"></i></div>
+                <div>
+                  <div class="cert-title">MCSE · CCNA · RHCE</div>
+                  <div class="cert-sub">Microsoft · Cisco · Red Hat Certified</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="gc cert-card">
+                <div class="cert-ico bg3"><i class="fas fa-laptop c3"></i></div>
+                <div>
+                  <div class="cert-title">DCA · A+ Hardware · N+</div>
+                  <div class="cert-sub">Diploma in Computer Application + Networking</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ EDUCATION ════════ -->
+  <section id="education" class="sp" style="background:var(--bg3)">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4" data-aos="fade-right">
+          <div class="lbl">Academic Background</div>
+          <h2 class="stitle">My <span>Education</span></h2>
+          <div class="div-line"></div>
+          <p class="sdesc">A strong academic foundation in Business and Commerce, backed by specialized technical
+            certifications in BI, Networking, and Google Workspace — built over a decade of continuous learning.</p>
+        </div>
+        <div class="col-lg-8" data-aos="fade-left">
+          <div class="edu-tl">
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="gc edu-card">
+                <div class="edu-yr"><i class="fas fa-graduation-cap me-1"></i> 2016 – 2018 · Post-Graduate</div>
+                <div class="edu-deg">MBA – Marketing Management</div>
+                <div class="edu-sch">Dr. Babasaheb Ambedkar Marathwada University (BAMU), Aurangabad</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="gc edu-card">
+                <div class="edu-yr"><i class="fas fa-graduation-cap me-1"></i> 2008 – 2016 · Graduate</div>
+                <div class="edu-deg">B.Com – Bachelor of Commerce</div>
+                <div class="edu-sch">Dr. Babasaheb Ambedkar Marathwada University (BAMU), Aurangabad</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="gc edu-card">
+                <div class="edu-yr"><i class="fas fa-school me-1"></i> 2007 – 2008 · Higher Secondary</div>
+                <div class="edu-deg">HSC – Higher Secondary Certificate</div>
+                <div class="edu-sch">Vasantrao Naik College, Aurangabad</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="gc edu-card">
+                <div class="edu-yr"><i class="fas fa-school me-1"></i> 2005 – 2006 · Secondary</div>
+                <div class="edu-deg">SSC – Secondary School Certificate</div>
+                <div class="edu-sch">DVM School, Aurangabad</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot" style="background:var(--gold);box-shadow:0 0 12px rgba(245,158,11,.5)"></div>
+              <div class="gc edu-card" style="border-color:rgba(245,158,11,.18)">
+                <div class="edu-yr" style="color:var(--gold)"><i class="fas fa-certificate me-1"></i> Jan 2022 – Feb
+                  2023 · Certification</div>
+                <div class="edu-deg">Advance Google G Suite Course</div>
+                <div class="edu-sch">Google Sites, Looker Studio, WhatsApp Integration, Telegram Integration · Delhi
+                </div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot" style="background:var(--gold);box-shadow:0 0 12px rgba(245,158,11,.5)"></div>
+              <div class="gc edu-card" style="border-color:rgba(245,158,11,.18)">
+                <div class="edu-yr" style="color:var(--gold)"><i class="fas fa-certificate me-1"></i> Certifications
+                </div>
+                <div class="edu-deg">MCSE · CCNA · RHCE · DCA · A+ Hardware · N+</div>
+                <div class="edu-sch">Microsoft Certified System Engineer · Cisco Certified Network Administrator · Red
+                  Hat Certified Engineer · Diploma in Computer Application</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ PROJECTS ════════ -->
+  <section id="projects" class="sp">
+    <div class="container">
+      <div class="text-center mb-2" data-aos="fade-up">
+        <div class="lbl lbl-center">Production Systems</div>
+        <h2 class="stitle text-center">Projects <span>Built</span></h2>
+        <div class="div-line div-center"></div>
+        <div class="proj-count-badge mb-4"><i class="fas fa-cubes"></i> 40+ Enterprise Systems Deployed in Production
+        </div>
+      </div>
+      <!-- Filter Buttons -->
+      <div class="proj-filter" data-aos="fade-up">
+        <button class="pf-btn active" data-filter="all">All Systems</button>
+        <button class="pf-btn" data-filter="core">Core Enterprise</button>
+        <button class="pf-btn" data-filter="audit">Audit / Safety</button>
+        <button class="pf-btn" data-filter="ops">Operations / Plant</button>
+        <button class="pf-btn" data-filter="biz">Business / Admin</button>
+      </div>
+
+      <!-- ★ FEATURED ★ -->
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col-12">
+          <div class="gc feat-proj proj-card show featured" data-cat="core">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-7">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="pc-ico bgo" style="width:56px;height:56px;border-radius:14px"><i class="fas fa-tasks co"
+                      style="font-size:1.4rem"></i></div>
+                  <div>
+                    <span class="pc-badge b-feat" style="float:none;margin:0 0 5px">⭐ Featured · v3.1</span>
+                    <h3 style="font-family:var(--fn-d);font-weight:800;font-size:1.35rem;margin:0;color:var(--tx)">
+                      Critical Delegation System</h3>
+                  </div>
+                </div>
+                <p style="color:var(--tx2);font-size:.9rem;line-height:1.82;margin-bottom:20px">
+                  Enterprise-grade task delegation, scheduling, approval engine, KRA reporting, Telegram push
+                  notifications, Google Calendar sync, and mobile-responsive workflow platform — built entirely on
+                  Google Apps Script. Serves management teams across all departments at Kalika Steel Alloys with
+                  real-time accountability and escalation workflows.
+                </p>
+                <div class="pc-tech" style="padding:0 0 20px">
+                  <span class="tc">Google Apps Script</span><span class="tc">Bootstrap 5.3</span><span
+                    class="tc">Telegram Bot API</span>
+                  <span class="tc">Google Calendar API</span><span class="tc">LockService</span><span class="tc">KRA
+                    Reporting</span>
+                  <span class="tc">Session Management</span><span class="tc">Approval Engine</span><span
+                    class="tc">Android APK</span>
+                </div>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="https://github.com/manumanoj2882/Critical-delegation-system" target="_blank" class="ba"><i
+                      class="fab fa-github"></i> View on GitHub</a>
+                  <a href="https://github.com/manumanoj2882" target="_blank" class="bo"><i class="fas fa-eye"></i> All
+                    Repos</a>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div
+                  style="background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.14);border-radius:12px;padding:22px">
+                  <div style="font-family:var(--fn-m);font-size:.66rem;color:var(--tx3);margin-bottom:12px">// SYSTEM
+                    CAPABILITIES</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> Multi-Level Task Delegation &
+                    Scheduling</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> Approval Engine with Escalation</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> Telegram Real-Time Notifications</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> Google Calendar Auto-Sync</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> KRA Performance Reporting</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> Mobile-Responsive + Android APK</div>
+                  <div class="feat-check"><i class="fas fa-check-circle cg"></i> Session & Lock Management</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="row g-4" id="projGrid">
+
+        <!-- CORE ENTERPRISE -->
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg1"><i class="fas fa-search-minus c1"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">RCFA Delay Management System</h4>
+            </div>
+            <p class="pc-desc">Root Cause Failure Analysis with delay tracking, department-wise accountability,
+              escalation workflows, auto-notification, and analytics dashboard for manufacturing QA.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Sheets DB</span><span
+                class="tc">Telegram</span><span class="tc">Power BI</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-user-check cg"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Contractual Attendance System</h4>
+            </div>
+            <p class="pc-desc">Full-cycle contractual workforce attendance: contractor management, shifts,
+              compliance-ready reports, and overtime tracking for industrial plants.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">QR Code</span><span
+                class="tc">Drive API</span><span class="tc">Bootstrap</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-clipboard-list c3"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Minutes of Meeting System</h4>
+            </div>
+            <p class="pc-desc">Digital MOM creation, action item tracking, owner assignment, deadline escalation,
+              executive summaries, and automated email distribution to all stakeholders.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Gmail API</span><span
+                class="tc">Telegram</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgo"><i class="fas fa-user-graduate co"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Apprenticeship Management System</h4>
+            </div>
+            <p class="pc-desc">End-to-end apprentice lifecycle: onboarding, training tracking, assessment,
+              certification, and statutory compliance reporting for Plant 1 & Plant 2 (PL-1 / PL-2).</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">PDF Gen</span><span
+                class="tc">Gmail API</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg1"><i class="fas fa-car c1"></i></div><span class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Driver Attendance Management (DAMS)</h4>
+            </div>
+            <p class="pc-desc">Driver attendance, duty scheduling, vehicle allocation, trip management, and supervisor
+              approval system with GPS check-in and Telegram notifications.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Calendar API</span><span
+                class="tc">Telegram</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg2"><i class="fas fa-id-badge c2"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Visitor Management System</h4>
+            </div>
+            <p class="pc-desc">Smart visitor registration, camera-capture badge generation, host notification via
+              Telegram, gate approval, and real-time visit log for industrial premises security.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Camera API</span><span
+                class="tc">Telegram Bot</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-walking cg"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Walk-In Guest Registration System</h4>
+            </div>
+            <p class="pc-desc">Dedicated walk-in guest flow with self-registration kiosk mode, host alerts, purpose
+              tracking, and automatic checkout time logging.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Bootstrap</span><span
+                class="tc">Gmail</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-road c3"></i></div><span class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Local Outdoor Duty System</h4>
+            </div>
+            <p class="pc-desc">Local OD request, supervisor approval, location tracking, mileage calculation, and duty
+              report generation for plant operations personnel.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Sheets DB</span><span
+                class="tc">Telegram</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="core" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgo"><i class="fas fa-plane-departure co"></i></div><span
+                class="pc-badge b-ent">Enterprise</span>
+              <h4 class="pc-title">Outstation Duty System</h4>
+            </div>
+            <p class="pc-desc">Full outstation travel management: request, multi-level approval, advance claim, daily
+              allowance calculation, and return settlement workflow.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Gmail</span><span class="tc">Drive
+                API</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <!-- AUDIT / COMPLIANCE -->
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="audit" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgr"><i class="fas fa-clipboard-check cr"></i></div><span
+                class="pc-badge b-audit">Audit</span>
+              <h4 class="pc-title">6S Audit System</h4>
+            </div>
+            <p class="pc-desc">Digital 6S workplace audit with photo evidence, scoring matrix, department benchmarking,
+              NCR generation, CAPA tracking, and monthly trend dashboards.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Camera API</span><span
+                class="tc">Drive API</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="audit" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgr"><i class="fas fa-shield-alt cr"></i></div><span
+                class="pc-badge b-audit">Safety</span>
+              <h4 class="pc-title">Safety Penalty Management System</h4>
+            </div>
+            <p class="pc-desc">Safety violation tracking, penalty issuance, department-wise accountability, repeat
+              offender alerts, and compliance reporting for EHS department.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Telegram</span><span
+                class="tc">Sheets DB</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="audit" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgr"><i class="fas fa-search cr"></i></div><span class="pc-badge b-audit">Audit</span>
+              <h4 class="pc-title">Audit & Verification System</h4>
+            </div>
+            <p class="pc-desc">General-purpose internal audit system with checklist creation, auditor assignment,
+              evidence upload, finding log, and corrective action monitoring.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Drive API</span><span
+                class="tc">Gmail</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="audit" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgr"><i class="fas fa-vials cr"></i></div><span class="pc-badge b-audit">QC</span>
+              <h4 class="pc-title">Bar Quality Checklist System</h4>
+            </div>
+            <p class="pc-desc">Steel bar quality inspection checklist with parameter-based grading, photo evidence, QC
+              sign-off, batch tracking, and non-conformance reporting.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Camera API</span><span
+                class="tc">Bootstrap</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="audit" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgr"><i class="fas fa-cog cr"></i></div><span class="pc-badge b-audit">QC</span>
+              <h4 class="pc-title">Mechanical Test Checklist</h4>
+            </div>
+            <p class="pc-desc">Structured mechanical testing checklist for plant equipment, with parameter recording,
+              tolerance tracking, approval workflow, and PDF report generation.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">PDF Gen</span><span
+                class="tc">Gmail</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <!-- OPS / PRODUCTION -->
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="ops" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-boxes c3"></i></div><span
+                class="pc-badge b-ops">Operations</span>
+              <h4 class="pc-title">Inventory Management System (IMS)</h4>
+            </div>
+            <p class="pc-desc">Comprehensive inventory tracking, stock alerts, issuance/receipt, raw & packing material,
+              FG production, and physical stock reconciliation with BI dashboards. 20% stock reduction achieved.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Power BI</span><span
+                class="tc">Excel</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="ops" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-industry c3"></i></div><span
+                class="pc-badge b-ops">Operations</span>
+              <h4 class="pc-title">Production Management System (PMS)</h4>
+            </div>
+            <p class="pc-desc">Production schedule monitoring, resource allocation, quality control, bottleneck
+              identification using FMS, and daily plan vs actual tracking. 10% efficiency increase.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Looker Studio</span><span
+                class="tc">Power BI</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="ops" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-project-diagram c3"></i></div><span
+                class="pc-badge b-ops">Operations</span>
+              <h4 class="pc-title">Flow Management System (FMS)</h4>
+            </div>
+            <p class="pc-desc">Visual process flow chart management for production pipelines, incoming material
+              tracking, bottleneck visualization, and operation dashboard for plant managers.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Google Sites</span><span
+                class="tc">Sheets DB</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="ops" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-crane c3"></i></div><span class="pc-badge b-ops">Plant</span>
+              <h4 class="pc-title">EOT Crane Management System</h4>
+            </div>
+            <p class="pc-desc">Electric Overhead Traveling Crane usage log, maintenance scheduling, load tracking,
+              operator assignment, and safety inspection records for steel plant operations.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Bootstrap</span><span
+                class="tc">Telegram</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="ops" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-flask c3"></i></div><span class="pc-badge b-ops">Plant</span>
+              <h4 class="pc-title">New Product Development (NPD) System</h4>
+            </div>
+            <p class="pc-desc">NPD pipeline management: idea submission, feasibility review, prototype tracking, trial
+              production, sign-off, and launch readiness checklist across departments.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Approval Engine</span><span
+                class="tc">Gmail</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="ops" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bg3"><i class="fas fa-barcode c3"></i></div><span class="pc-badge b-ops">Plant</span>
+              <h4 class="pc-title">Part Code Generator</h4>
+            </div>
+            <p class="pc-desc">Automated part code generation system with configurable format rules, category mapping,
+              duplicate prevention, and master register integration for ERP readiness.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Sheets DB</span><span
+                class="tc">Bootstrap</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <!-- BUSINESS / ADMIN -->
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="biz" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-wallet cg"></i></div><span class="pc-badge b-biz">Business</span>
+              <h4 class="pc-title">Expenses Management System</h4>
+            </div>
+            <p class="pc-desc">Employee expense submission, category-wise budgeting, multi-level approval, payment
+              tracking, and monthly expense analytics with department-wise breakdown.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Telegram</span><span
+                class="tc">Drive API</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="biz" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-calculator cg"></i></div><span
+                class="pc-badge b-biz">Business</span>
+              <h4 class="pc-title">Product Costing System</h4>
+            </div>
+            <p class="pc-desc">BOM-based product costing with raw material rates, overhead allocation, labour cost,
+              margin calculation, and versioned costing sheets for management review.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Excel</span><span class="tc">Looker
+                Studio</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="biz" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-users cg"></i></div><span class="pc-badge b-biz">Admin</span>
+              <h4 class="pc-title">Employee Management System</h4>
+            </div>
+            <p class="pc-desc">Complete employee master with department structure, document management, leave tracking,
+              and organizational reporting. Foundation for all HR-linked systems.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Drive API</span><span
+                class="tc">Bootstrap</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="biz" data-aos="fade-up" data-aos-delay="50">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-home cg"></i></div><span class="pc-badge b-biz">Personal</span>
+              <h4 class="pc-title">Family Vault</h4>
+            </div>
+            <p class="pc-desc">Secure family document vault with categorized storage, access control, document expiry
+              reminders, and encrypted Google Drive integration for personal records.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Drive API</span><span
+                class="tc">Session Mgmt</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="biz" data-aos="fade-up" data-aos-delay="80">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-sitemap cg"></i></div><span class="pc-badge b-biz">Admin</span>
+              <h4 class="pc-title">Organization Chart System</h4>
+            </div>
+            <p class="pc-desc">Dynamic org chart with hierarchy management, department structure visualization, position
+              tracking, and auto-update on employee changes.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Google Sites</span><span
+                class="tc">Bootstrap</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 proj-item" data-cat="biz" data-aos="fade-up" data-aos-delay="110">
+          <div class="gc proj-card show">
+            <div class="pc-head">
+              <div class="pc-ico bgg"><i class="fas fa-graduation-cap cg"></i></div><span
+                class="pc-badge b-biz">Education</span>
+              <h4 class="pc-title">School Management System</h4>
+            </div>
+            <p class="pc-desc">Student enrollment, attendance, fee management, exam records, and report card generation
+              — a complete school administration platform built on Google Apps Script.</p>
+            <div class="pc-tech"><span class="tc">Apps Script</span><span class="tc">Gmail API</span><span
+                class="tc">Drive API</span></div>
+            <div class="pc-foot"><a href="https://github.com/manumanoj2882" target="_blank" class="bg-btn"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integration Layer -->
+      <div class="row mt-5" data-aos="fade-up">
+        <div class="col-12">
+          <div class="gc" style="padding:30px">
+            <div style="text-align:center;margin-bottom:20px">
+              <div
+                style="font-family:var(--fn-m);font-size:.68rem;color:var(--tx3);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">
+                Across All Systems</div>
+              <div style="font-family:var(--fn-d);font-weight:700;font-size:1.1rem;color:var(--tx)">Integration &
+                Special Layers</div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center">
+              <div class="int-pill"><i class="fab fa-telegram"></i> Telegram Bot Notifications</div>
+              <div class="int-pill"><i class="fab fa-whatsapp"></i> WhatsApp Automation</div>
+              <div class="int-pill"><i class="fas fa-envelope"></i> Gmail API Triggers</div>
+              <div class="int-pill"><i class="fas fa-sms"></i> SMS Automation</div>
+              <div class="int-pill"><i class="fas fa-calendar-sync"></i> Google Calendar Sync</div>
+              <div class="int-pill"><i class="fab fa-android"></i> Android APK via WebView</div>
+              <div class="int-pill"><i class="fas fa-camera"></i> Camera Capture Workflow</div>
+              <div class="int-pill"><i class="fas fa-microphone"></i> Voice Recording</div>
+              <div class="int-pill"><i class="fab fa-google-drive"></i> Google Drive Backend</div>
+              <div class="int-pill"><i class="fas fa-lock"></i> LockService Architecture</div>
+              <div class="int-pill"><i class="fas fa-user-shield"></i> Session Management</div>
+              <div class="int-pill"><i class="fas fa-project-diagram"></i> Approval Engine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ EXPERIENCE ════════ -->
+  <section id="experience" class="sp" style="background:var(--bg3)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="lbl lbl-center">Career Path</div>
+        <h2 class="stitle text-center">Work <span>Experience</span></h2>
+        <div class="div-line div-center"></div>
+      </div>
+      <div class="exp-tl">
+
+        <div class="exp-item" data-aos="fade-right">
+          <div class="exp-dot" style="background:var(--green);box-shadow:0 0 12px rgba(34,197,94,.5)"></div>
+          <div class="gc exp-card" style="border-color:rgba(0,200,240,.18)">
+            <div class="exp-period"><i class="fas fa-circle cg" style="font-size:6px;margin-right:5px"></i> Aug 2023 –
+              Present</div>
+            <div class="exp-co">Kalika Steel Alloys Pvt Ltd</div>
+            <div class="exp-role">MIS – Management Information System · Jalna, India</div>
+            <ul class="exp-pts">
+              <li>Managed IMS — 20% reduction in excess stock, 15% increase in stock turnover</li>
+              <li>Oversaw PMS + FMS — 10% increase in overall production efficiency</li>
+              <li>Built 20+ enterprise WebApps: delegation, RCFA, audit, attendance, visitor, NPD & more</li>
+              <li>Designed interactive BI dashboards using Looker Studio and Power BI for management</li>
+              <li>Google Sheets + Apps Script integration — 25% faster reporting turnaround</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item" data-aos="fade-left">
+          <div class="exp-dot"></div>
+          <div class="gc exp-card">
+            <div class="exp-period">Jun 2022 – Aug 2023</div>
+            <div class="exp-co">Ultra Beauty Care Pvt Ltd (Emami, McAffine, Plum)</div>
+            <div class="exp-role">Database Management Engineer · Aurangabad, India</div>
+            <ul class="exp-pts">
+              <li>Overall management and control of Production, Logistics, and Operations</li>
+              <li>Updated daily production plans in PMS based on weekly Sales team inputs</li>
+              <li>Managed raw & packing material issuance, consumption, and FG production in IMS</li>
+              <li>Verified accuracy of stock entries, physical stock checks, and data integrity</li>
+              <li>Maintained procedures and QC protocols for Raw Materials, Packing, and Finished Products</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item" data-aos="fade-right">
+          <div class="exp-dot"></div>
+          <div class="gc exp-card">
+            <div class="exp-period">Nov 2021 – Jun 2022</div>
+            <div class="exp-co">Mapaex Tradelink Pvt Ltd (P&G Distributor)</div>
+            <div class="exp-role">Assistant System Admin – Operations MIS · Aurangabad, India</div>
+            <ul class="exp-pts">
+              <li>Owned overall MIS for entire distributor operations — main site and all branches</li>
+              <li>Managed backroom processes: data integration, backups, reconciliation, data integrity</li>
+              <li>Handled H/W and S/W support, troubleshooting, and call logging for operations team</li>
+              <li>Performed site-specific data analytics and provided business analysis reports on-time</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item" data-aos="fade-left">
+          <div class="exp-dot"></div>
+          <div class="gc exp-card">
+            <div class="exp-period">Dec 2020 – Nov 2021</div>
+            <div class="exp-co">Indiabulls Consumer Finance Ltd (Dhani Loans)</div>
+            <div class="exp-role">MIS Executive – Collection PL Department · Aurangabad, India</div>
+            <ul class="exp-pts">
+              <li>Maintained and verified databases, reviewed entries, and ensured data confidentiality</li>
+              <li>Prepared dashboards, day-end reports, and presentations for management</li>
+              <li>Coordinated with field team on collection planning tasks and FOS incentive queries</li>
+              <li>Daily collection dashboard updates and staffing/manpower forecasting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item" data-aos="fade-right">
+          <div class="exp-dot"></div>
+          <div class="gc exp-card">
+            <div class="exp-period">Jun 2019 – Nov 2020</div>
+            <div class="exp-co">Coatall Films Pvt Ltd</div>
+            <div class="exp-role">MIS Executive · Aurangabad, India</div>
+            <ul class="exp-pts">
+              <li>Handled all production reports, calculations, and operational documentation</li>
+              <li>Used FOCUS V7 system for computer-assisted data entry and production tracking</li>
+              <li>Operated printing technology and re-winder; maintained packaging assembly standards</li>
+              <li>Trained employees and maintained strict quality and compliance standards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item" data-aos="fade-left">
+          <div class="exp-dot" style="background:var(--tx3)"></div>
+          <div class="gc exp-card">
+            <div class="exp-period">Mar 2013 – Aug 2017</div>
+            <div class="exp-co">Serco Global Services</div>
+            <div class="exp-role">Team Leader – M&G TV Process (Vodafone) · Aurangabad, India</div>
+            <ul class="exp-pts">
+              <li>Led a team of 25–30 Customer Care Executives with performance reviews and feedback</li>
+              <li>Handled client issues and prepared weekly, monthly, quarterly review presentations</li>
+              <li>Responsible for recruitment, appraisals, goal setting, and quality compliance</li>
+              <li>Participating in staffing/manpower forecasting and qualitative metrics improvement</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ CONTACT ════════ -->
+  <section id="contact" class="sp">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="lbl lbl-center">Get In Touch</div>
+        <h2 class="stitle text-center">Let's <span>Connect</span></h2>
+        <div class="div-line div-center"></div>
+        <p class="sdesc mx-auto text-center">Have a project that needs enterprise-grade automation or MIS development?
+          Let's talk.</p>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="gc ct-item">
+            <div class="ct-ico bg1"><i class="fas fa-phone c1"></i></div>
+            <div>
+              <div class="ct-lbl">Phone</div>
+              <div class="ct-val"><a href="tel:+918855862882">+91 88558 62882</a></div>
+            </div>
+          </div>
+          <div class="gc ct-item">
+            <div class="ct-ico bgo"><i class="fas fa-envelope co"></i></div>
+            <div>
+              <div class="ct-lbl">Email</div>
+              <div class="ct-val"><a href="mailto:manoj.patil64@yahoo.com">manoj.patil64@yahoo.com</a></div>
+            </div>
+          </div>
+          <div class="gc ct-item">
+            <div class="ct-ico" style="background:rgba(255,255,255,.04)"><i class="fab fa-github"
+                style="color:var(--tx2)"></i></div>
+            <div>
+              <div class="ct-lbl">GitHub</div>
+              <div class="ct-val"><a href="https://github.com/manumanoj2882"
+                  target="_blank">github.com/manumanoj2882</a></div>
+            </div>
+          </div>
+          <div class="gc ct-item">
+            <div class="ct-ico bg3"><i class="fas fa-map-marker-alt c3"></i></div>
+            <div>
+              <div class="ct-lbl">Location</div>
+              <div class="ct-val">CIDCO N2 Mukundwadi, Aurangabad<br>Maharashtra – 431001</div>
+            </div>
+          </div>
+          <a href="https://wa.me/918855862882" target="_blank" class="ba w-100 justify-content-center mt-2"
+            style="background:linear-gradient(135deg,#25d366,#128c7e)">
+            <i class="fab fa-whatsapp" style="font-size:1.05rem"></i> Chat on WhatsApp
+          </a>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="gc" style="padding:32px">
+            <h4 style="font-family:var(--fn-d);font-weight:700;font-size:1.15rem;margin-bottom:22px;color:var(--tx)">
+              Send a Message</h4>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="fg"><label class="fl-lbl">Your Name</label><input type="text" class="fc"
+                    placeholder="John Doe" /></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="fg"><label class="fl-lbl">Email Address</label><input type="email" class="fc"
+                    placeholder="john@company.com" /></div>
+              </div>
+              <div class="col-12">
+                <div class="fg"><label class="fl-lbl">Company / Organization</label><input type="text" class="fc"
+                    placeholder="Company Pvt Ltd" /></div>
+              </div>
+              <div class="col-12">
+                <div class="fg"><label class="fl-lbl">Subject</label><input type="text" class="fc"
+                    placeholder="Enterprise System Development / Collaboration" /></div>
+              </div>
+              <div class="col-12">
+                <div class="fg"><label class="fl-lbl">Message</label><textarea class="fc" rows="5"
+                    placeholder="Describe your project or requirement in detail..."></textarea></div>
+              </div>
+              <div class="col-12"><button class="ba w-100 justify-content-center"
+                  onclick="alert('Thank you! Message noted. Please email directly at manoj.patil64@yahoo.com for fastest response.')"><i
+                    class="fas fa-paper-plane"></i> Send Message</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer>
+    <div class="container">
+      <div class="f-tag">"Building Systems That <span>Businesses Depend On</span>"</div>
+      <div class="f-soc">
+        <a href="https://github.com/manumanoj2882" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:manoj.patil64@yahoo.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+918855862882"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/918855862882" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://linkedin.com/in/manumanoj2882" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/manumanoj2314" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="f-copy">© 2024 <span>Manoj B Bhere</span> · Data Analyst (MIS) & Enterprise Systems Developer ·
+        Aurangabad, Maharashtra 431001</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918855862882" target="_blank" class="wa-float" title="WhatsApp"><i
+      class="fab fa-whatsapp"></i></a>
+  <button id="scrollTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/dist/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    AOS.init({ duration: 650, once: true, offset: 55 });
+
+    new Typed('#typedEl', {
+      strings: [
+        'Enterprise Systems Development',
+        'Workflow Automation',
+        'Google Apps Script Architecture',
+        'Business Process Engineering',
+        'MIS + Internal Automation',
+        'Data Analysis & BI Dashboards'
+      ],
+      typeSpeed: 46, backSpeed: 26, backDelay: 1800, loop: true, smartBackspace: true
+    });
+
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+    // Active nav
+    const sects = document.querySelectorAll('section[id]');
+    const nls = document.querySelectorAll('.nav-link');
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          nls.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { threshold: .3 }).observe && sects.forEach(s => new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { nls.forEach(l => l.classList.remove('active')); const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`); if (a) a.classList.add('active'); } });
+    }, { threshold: .3 }).observe(s));
+
+    const stBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => stBtn.classList.toggle('show', scrollY > 400));
+    stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Project filter
+    document.querySelectorAll('.pf-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const f = this.dataset.filter;
+        document.querySelectorAll('.proj-item').forEach(item => {
+          const cat = item.dataset.cat;
+          const card = item.querySelector('.proj-card');
+          if (f === 'all' || cat === f) {
+            item.style.display = '';
+            card.classList.add('show');
+          } else {
+            item.style.display = 'none';
+            card.classList.remove('show');
+          }
+        });
+        AOS.refresh();
+      });
+    });
+
+    // Particles
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 900 } },
+        color: { value: ['#00c8f0', '#0055e0', '#6d28d9'] },
+        shape: { type: 'circle' },
+        opacity: { value: .22, random: true, anim: { enable: true, speed: .7, opacity_min: .04, sync: false } },
+        size: { value: 2.2, random: true },
+        line_linked: { enable: true, distance: 150, color: '#0055e0', opacity: .07, width: 1 },
+        move: { enable: true, speed: .75, direction: 'none', random: true, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: false }, resize: true },
+        modes: { grab: { distance: 130, line_linked: { opacity: .22 } } }
+      },
+      retina_detect: true
+    });
+
+    // Mobile nav close
+    document.querySelectorAll('.nav-link').forEach(l => {
+      l.addEventListener('click', () => {
+        const c = document.getElementById('nc');
+        const bs = bootstrap.Collapse.getInstance(c);
+        if (bs) bs.hide();
+      });
+    });
+  </script>
+</body>
+
+</html>
