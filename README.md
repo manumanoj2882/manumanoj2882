@@ -1,164 +1,55 @@
-<div align="center">
+# ⚡ MANOJ B BHERE | Enterprise Systems Architect
+### 11+ Years of Transforming Business Operations with Automation 🚀
 
-# 🚀 Manoj Bhere
-
-### Enterprise Systems Developer
-
-### Google Apps Script Architect
-
-### Workflow Automation Specialist
-
-Building production-grade internal business systems, enterprise workflow automation, and scalable Google Apps Script platforms.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=4285F4&center=true&vCenter=true&width=700&lines=Google+Apps+Script+Architect;Workflow+Automation+Specialist;11%2B+Years+of+MIS+Excellence;Real+Systems.+Real+Impact." alt="Typing SVG" />
+</p>
 
 ---
 
-### ⚡ Turning Operations into Automation
-
-From approval engines to attendance systems, from delegation workflows to enterprise dashboards — I design systems that solve real business problems with speed, precision, and professional architecture.
-
-</div>
-
----
-
-# 💼 About Me
-
-I specialize in building enterprise-grade automation systems for organizations where operational efficiency matters.
-
-My work focuses on:
-
-* Business Process Automation
-* Approval Workflow Engines
-* Attendance & Tracking Systems
-* Reporting & Analytics Dashboards
-* Google Apps Script Web Applications
-* Android + Web Hybrid Systems
-* Smart Notification Architectures
-
-I don't build demo apps.
-I build systems people use every day.
+### 🛠️ Technical Ecosystem
+<p align="center">
+  <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google-apps-script&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black" />
+  <img src="https://img.shields.io/badge/Looker_Studio-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android_WebView-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+</p>
 
 ---
 
-# 🏗 Featured Enterprise Systems
+### 📂 Total Project Directory (Categorized)
 
-### Critical Delegation System
+#### 🏢 Core Enterprise Systems
+- **Enhanced Critical & General Delegation System v3.1** (Multi-level Approval)
+- **RCFA Delay Management System** (Root Cause Analysis)
+- **Minutes of Meeting (MOM) System** & **ALL Flow Management**
+- **Daily & Scheduling Checklist Systems**
 
-### RCFA Delay Management System
+#### 👥 Workforce & Attendance Suite
+- **Contractual & Apprenticeship Attendance Systems** (PL-1 / PL-2)
+- **DAMS (Driver Attendance Management System)** - *Android APK Integration*
+- **Local & Outstation Duty Systems**
+- **Visitor & Walk-In Guest Registration Portals**
 
-### Contractual Attendance System
+#### 🏭 Production & Plant Operations
+- [cite_start]**Inventory Management (IMS)** & **Production Management (PMS)** [cite: 10]
+- **EOT Crane Management** & **Roll Shop Management**
+- **New Product Development (NPD)** & **Part Code Generator**
 
-### Driver Attendance Management System (DAMS)
+#### 🛡️ Audit, Compliance & Safety
+- **Safety Department Penalty Management**
+- **6S Audit System** & **Mechanical Test Checklists**
+- **Delay Management & Inspection Portals**
 
-### Apprenticeship Management System
-
-### Visitor Management System
-
-### Family Vault
-
-### Audit & Verification Systems
-
-### New Product Development System
-
-### Expense + Inventory + Order Systems
-
----
-
-# 🛠 Tech Stack
-
-## Backend Engineering
-
-* Google Apps Script
-* Google Sheets Architecture
-* Workflow Logic Design
-* Multi-user Session Management
-* Trigger-based Automation
-* LockService + Concurrency Control
-
-## Frontend Engineering
-
-* HTML5
-* CSS3
-* JavaScript
-* Bootstrap 5.3
-* DataTables
-* SweetAlert2
-* Professional Responsive UI Systems
-
-## Integrations
-
-* Telegram Bot API
-* Google Calendar API
-* Google Drive API
-* Android WebView APK Wrappers
-* Camera Capture + Voice Recording
-* Email + Notification Systems
+#### 💼 Business & Admin Intelligence
+- **Product Costing** & **Expenses Management Systems**
+- **Employee Management** & **Organization Chart Automation**
+- **Family Vault** & **Drive Cleanup Systems**
 
 ---
 
-# 🌟 Featured Project
-
-# Critical Delegation System
-
-An enterprise-grade delegation, approval, scheduling, and reporting platform built using Google Apps Script + Google Sheets + HTML/CSS/JavaScript.
-
-### Core Features
-
-✔ Smart Task Delegation
-✔ Multi-Level Approval Workflow
-✔ Telegram Approval Actions
-✔ Due Soon + Overdue Alerts
-✔ Google Calendar Sync
-✔ KRA Reports + Performance Dashboard
-✔ Mobile-Responsive Professional UI
-✔ Verification + Closure Workflow
-
-### Repository
-
-🔗 https://github.com/manumanoj2882/Critical-delegation-system
-
----
-
-# 🎯 Current Focus
-
-* Enterprise Workflow Automation
-* High-Scale Internal Systems
-* Android + Web Hybrid Platforms
-* Smart Notification Engines
-* Professional GitHub Architecture
-* Production-Ready System Design
-
----
-
-# 🧠 Development Philosophy
-
-Clean systems.
-Strong architecture.
-Real business impact.
-
-Code is not the goal.
-Operational excellence is.
-
----
-
-# 📌 GitHub Mission
-
-Building repositories that represent real enterprise systems —
-not tutorial projects.
-
-Every project should show:
-
-* structure
-* scale
-* clarity
-* production readiness
-* engineering discipline
-
----
-
-<div align="center">
-
-## ⚙ Building Systems That Businesses Depend On
-
-### Enterprise Automation is Operational Engineering
-
-</div>
+### 📊 Performance Analytics
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=manumanoj2882&show_icons=true&theme=tokyonight&hide_border=true" height="180" />
+</p>
